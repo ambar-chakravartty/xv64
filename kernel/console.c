@@ -139,6 +139,7 @@ panic(char *s)
 #define CRTPORT 0x3d4
 static ushort *crt = (ushort*)P2V(0xb8000);  // CGA memory
 
+
 static void
 cgaputc(int c)
 {

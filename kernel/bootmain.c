@@ -11,6 +11,7 @@
 
 #define SECTSIZE  512
 
+// Define PIT ports and frequency
 struct mbheader {
   uint32 magic;
   uint32 flags;
@@ -62,6 +63,7 @@ found_it:
   if (hdr->bss_end_addr > hdr->load_end_addr)
     stosb((void*) hdr->load_end_addr, 0,
       hdr->bss_end_addr - hdr->load_end_addr);
+
 
   // Call the entry point from the multiboot header.
   // Does not return!

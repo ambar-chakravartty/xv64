@@ -59,7 +59,7 @@ endif
 #TOOLPREFIX = i386-jos-elf-
 
 # Using native tools (e.g., on X86 Linux)
-#TOOLPREFIX =
+TOOLPREFIX = x86_64-elf-
 
 CC = $(TOOLPREFIX)gcc
 AS = $(TOOLPREFIX)gas
@@ -178,6 +178,7 @@ UPROGS=\
 	fs/usertests\
 	fs/wc\
 	fs/zombie\
+	fs/clear\
 
 fs/README: README
 	@mkdir -p fs
